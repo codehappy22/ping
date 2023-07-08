@@ -1,0 +1,17 @@
+function checkServerConnection() {
+    var url = "https://www.example.com"; // Замените на URL вашего удаленного сервера
+
+    fetch(url)
+        .then(function(response) {
+            if (response.ok) {
+                console.log("Связь с сервером установлена");
+            } else {
+                console.log("Ошибка: " + response.status);
+            }
+        })
+        .catch(function(error) {
+            console.log("Ошибка при установке связи с сервером:", error);
+        });
+}
+
+checkServerConnection();
